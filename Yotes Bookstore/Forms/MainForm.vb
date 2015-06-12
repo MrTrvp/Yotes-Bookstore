@@ -18,11 +18,13 @@ Namespace Forms
                 Dim beforeTaxValue = item.Control.Total
                 Dim taxValue = beforeTaxValue * _taxRateNumericUpDown.Value
                 Dim afterTaxValue = beforeTaxValue + taxValue
+                
                 totalCost += afterTaxValue
 
                 sb.Append(item.Name)
                 sb.Append(" - ")
                 sb.AppendLine(quantity)
+                
                 sb.Append(textPadding)
                 sb.Append(beforeTaxValue.ToString("c"))
                 sb.Append(" + ")
